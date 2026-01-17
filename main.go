@@ -51,7 +51,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 			file, err := os.Open(fileName)
 			if err != nil {
-				s.ChannelMessageSend(m.ChannelID, "❌ File tidak ditemukan: "+fileName)
+				s.ChannelMessageSend(m.ChannelID, "File tidak ditemukan: "+fileName)
 				return
 			}
 			defer file.Close()
@@ -59,7 +59,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			_, err = s.ChannelFileSend(m.ChannelID, fileName, file)
 			if err != nil {
 				fmt.Println("Error kirim file:", err)
-				s.ChannelMessageSend(m.ChannelID, "❌ Gagal mengirim file.")
+				s.ChannelMessageSend(m.ChannelID, "Gagal mengirim file.")
 			}
 		}
 	}
