@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// Ganti dengan Token Bot Discord Anda
-	token := "MTQ2MTc0MTg3MDkyODM2NzY2OQ.G7GPnh.fWlDW30cu-V5Yj33CHXlSwMrN6Ifs-MG7N46aU"
+	token := "your discord token here"
 
 	// Membuat sesi Discord baru
 	dg, err := discordgo.New("Bot " + token)
